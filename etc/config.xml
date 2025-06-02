@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_CustomShippingRate
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <customshippingrate>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <show_on_adminside>0</show_on_adminside>
+                <show_on_frontend>1</show_on_frontend>
+                <model>ManiyaTech\CustomShippingRate\Model\Carrier</model>
+                <title>Custom Shipping Rate</title>
+            </customshippingrate>
+        </carriers>
+    </default>
+</config>

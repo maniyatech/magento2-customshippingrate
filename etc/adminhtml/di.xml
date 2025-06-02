@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_CustomShippingRate
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Quote\Model\Quote\Address\Total\Shipping">
+        <plugin name="customShippingRate::ShippingPlugin" type="ManiyaTech\CustomShippingRate\Plugin\Quote\Address\Total\ShippingPlugin" />
+    </type>
+    <type name="Magento\Quote\Api\Data\AddressInterface">
+        <plugin sortOrder="1" name="customShippingRateAddress" type="ManiyaTech\CustomShippingRate\Plugin\Model\Quote\AddressPlugin"/>
+    </type>
+</config>

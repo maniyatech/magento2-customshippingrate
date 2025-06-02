@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_CustomShippingRate
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="shipping_method">
+            <block class="ManiyaTech\CustomShippingRate\Block\Adminhtml\Order\Create\Shipping\Method\Form" template="ManiyaTech_CustomShippingRate::order/create/shipping/method/form.phtml" name="order_create_shipping_form" as="form">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">ManiyaTech\CustomShippingRate\ViewModel\CustomShippingRate</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

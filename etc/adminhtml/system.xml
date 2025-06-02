@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ManiyaTech
+ *
+ * @author        Milan Maniya
+ * @package       ManiyaTech_CustomShippingRate
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customshippingrate" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label">
+            <label>Custom Shipping Rate</label>
+            <tab>maniyatech</tab>
+            <resource>ManiyaTech_CustomShippingRate::config_customshippingrate</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="0" translate="label">
+                <label>Custom Shipping Rate</label>
+                <attribute type="expanded">1</attribute>
+                <field id="link" translate="label" type="label" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Configuration</label>
+                    <frontend_model>ManiyaTech\CustomShippingRate\Block\Adminhtml\System\Config\Form\Field\Link</frontend_model>
+                </field>
+            </group>
+        </section>
+        <section id="carriers">
+            <group id="customshippingrate" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Rate</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_on_adminside" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled for Admin side</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="show_on_frontend" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Enabled for Frontend Checkout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Title</label>
+                </field>
+                <field id="shipping_type" translate="label comment" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shipping Type</label>
+                    <frontend_model>ManiyaTech\CustomShippingRate\Block\Adminhtml\System\Config\Form\Field\ShippingList</frontend_model>
+                    <backend_model>ManiyaTech\CustomShippingRate\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment>List of locations where customer can pick up ordered item.</comment>
+                </field>
+                <field id="specificerrmsg" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Displayed Error Message</label>
+                </field>
+                <field id="showmethod" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Show Method if Not Applicable</label>
+                    <frontend_class>shipping-skip-hide</frontend_class>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="sallowspecific" translate="label" type="select" sortOrder="1900" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Ship to Applicable Countries</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="1910" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Ship to Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
