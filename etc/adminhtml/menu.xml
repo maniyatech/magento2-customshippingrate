@@ -10,8 +10,8 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-    	<add id="ManiyaTech_CustomShippingRate::main" title="Custom Shipping Rate" translate="Custom Shipping Rate" module="ManiyaTech_CustomShippingRate" parent="ManiyaTech_Core::core" sortOrder="30" resource="ManiyaTech_CustomShippingRate::main" dependsOnConfig="adminlogo/general/enabled"/>
+    	<add id="ManiyaTech_CustomShippingRate::main" title="Custom Shipping Rate" translate="Custom Shipping Rate" module="ManiyaTech_CustomShippingRate" parent="ManiyaTech_Core::core" sortOrder="50" resource="ManiyaTech_CustomShippingRate::main" dependsOnConfig="carriers/customshippingrate/active"/>
 
-        <add id="ManiyaTech_CustomShippingRate::configuration_menu" title="Manage Custom Shipping Rate" module="ManiyaTech_CustomShippingRate" parent="ManiyaTech_CustomShippingRate::main" sortOrder="20" action="adminhtml/system_config/edit/section/customshippingrate" resource="ManiyaTech_CustomShippingRate::configuration_menu" />
+        <add id="ManiyaTech_CustomShippingRate::configuration_menu" title="Manage Custom Shipping Rate" module="ManiyaTech_CustomShippingRate" parent="ManiyaTech_CustomShippingRate::main" sortOrder="10" action="adminhtml/system_config/edit/section/customshippingrate" resource="ManiyaTech_CustomShippingRate::configuration_menu" />
     </menu>
 </config>

@@ -13,7 +13,7 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="ManiyaTech_Core::core">
-                    <resource id="ManiyaTech_CustomShippingRate::main" title="Custom Shipping Rate Settings" translate="title" sortOrder="30">
+                    <resource id="ManiyaTech_CustomShippingRate::main" title="Custom Shipping Rate Settings" translate="title" sortOrder="50">
                         <resource id="ManiyaTech_CustomShippingRate::configuration_menu" title="Configurations" translate="title" sortOrder="10"/>
                     </resource>
                 </resource>
@@ -21,7 +21,7 @@
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
                             <resource id="ManiyaTech_Core::config">
-                                <resource id="ManiyaTech_CustomShippingRate::config_customshippingrate" title="Custom Shipping Rate" translate="title" sortOrder="30"/>
+                                <resource id="ManiyaTech_CustomShippingRate::config_customshippingrate" title="Custom Shipping Rate" translate="title" sortOrder="50"/>
                             </resource>
                         </resource>
                     </resource>
